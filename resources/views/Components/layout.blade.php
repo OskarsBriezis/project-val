@@ -18,10 +18,10 @@
           </div>
           <div class="hidden md:block">
             <div class="ml-10 flex items-baseline space-x-4">
-              <x-nav-link href="/">Home</x-nav-link>
-              <x-nav-link href="/about" id="sgsgsagsagsags">About</x-nav-link>
-              <x-nav-link href="/contact">Contact</x-nav-link>
-              <x-nav-link href="/login">Log in</x-nav-link>
+              <x-nav-link href="/" :active="request()->is('/')">Home</x-nav-link>
+              <x-nav-link href="/jobs" :active="request()->is('jobs')">Jobs</x-nav-link>
+              <x-nav-link href="/contact" :active="request()->is('contact')">Contact</x-nav-link>
+              <x-nav-link href="/login" :active="request()->is('login')">Log in</x-nav-link>
             </div>
           </div>
         </div>
@@ -97,12 +97,12 @@
 
   <header class="bg-white shadow">
     <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
-      <h1 class="text-3xl font-bold tracking-tight text-gray-900">{{$heading}}</h1>
+      <h1 class="text-3xl font-bold tracking-tight text-gray-900">{{ $heading }}</h1>
     </div>
   </header>
   <main>
     <div class="mx-auto max-w-7xl py-6 sm:px-6 lg:px-8">
-      {{$slot}}
+      {{ $slot}}
     </div>
   </main>
 </div>
