@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Models\Job;
+use App\Models\Skin;
 
 
 
@@ -9,21 +9,22 @@ Route::get('/', function () {
     return view('home');
 });
 
-Route::get('/jobs', function (){
-    return view('jobs', [
-        'jobs' => Job::all()
+Route::get('/skins', function (){
+    return view('skins', [
+        'skins' => Skin::all()
     ]);
 });
 
-Route::get('/jobs/{id}', function ($id){
+Route::get('/skins/{id}', function ($id){
 
-    $job = Job::find($id);
+    $skin = Skin::find($id);
 
-    return view ('job', ['job' => $job]);
+    return view ('skin', ['skin' => $skin]);
 });
-Route::get('/contact', function () {
-    return view ('contact');
+Route::get('/register', function () {
+    return view ('register');
 });
 Route::get('/login', function () {
     return view ('login');
 });
+

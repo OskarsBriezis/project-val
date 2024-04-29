@@ -11,10 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('job_listings', function (Blueprint $table) {
+        Schema::create('skin_listings', function (Blueprint $table) {
             $table->id();
-            $table->string('title');
-            $table->string('salary');
+            $table->string('name');
+            $table->string('value');
             $table->timestamps();
         });
     }
