@@ -19,7 +19,7 @@
           <div class="hidden md:block">
             <div class="ml-10 flex items-baseline space-x-4">
               <x-nav-link href="/" :active="request()->is('/')">Home</x-nav-link>
-              <x-nav-link href="/skins" :active="request()->is('skins')">Gun skins</x-nav-link>
+              <x-nav-link href="/gunskins" :active="request()->is('gunskins')">Gun skins</x-nav-link>
               <x-nav-link href="/register" :active="request()->is('register')">Register</x-nav-link>
               <x-nav-link href="/login" :active="request()->is('login')">Log in</x-nav-link>
             </div>

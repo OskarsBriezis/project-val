@@ -9,17 +9,17 @@ Route::get('/', function () {
     return view('home');
 });
 
-Route::get('/skins', function (){
-    return view('skins', [
-        'skins' => Skin::all()
+Route::get('/guns kins', function (){
+    return view('guns kins', [
+        'guns kins' => Skin::all()
     ]);
 });
 
-Route::get('/skins/{id}', function ($id){
+Route::get('/guns kins/{id}', function ($id){
 
-    $skin = Skin::find($id);
+    $gunskin = Skin::find($id);
 
-    return view ('skin', ['skin' => $skin]);
+    return view ('gun skin', ['gun skin' => $gunskin]);
 });
 Route::get('/register', function () {
     return view ('register');

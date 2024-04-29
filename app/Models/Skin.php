@@ -12,8 +12,8 @@ class Skin {
     }
 
     public static function find (int $id): array {
-        $skin = Arr::first(static::all(), fn($skin) => $skin['id'] == $id);
-        if (! $skin) {
+        $gunskin = Arr::first(static::all(), fn($gunskin) => $gunskin['id'] == $id);
+        if (! $gunskin) {
             abort(404);
         }
     }
